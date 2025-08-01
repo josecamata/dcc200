@@ -12,12 +12,11 @@ sym: teste_matriz_simetrica.cpp MatSimetrica.h MatSimetrica.cpp
 asym: teste_matriz_anti.cpp MatAntiSimetrica.h MatAntiSimetrica.cpp
 	g++ -o asym teste_matriz_anti.cpp MatAntiSimetrica.cpp
 
+coo: teste_matcoo.cpp MatCOO.h MatCOO.cpp
+	g++ -o coo teste_matcoo.cpp MatCOO.cpp
+
 clean:
-	rm -f tria *.o
+	rm -f tria *.o sym asym coo
 
-.PHONY: clean tria
+.PHONY: clean tria sym asym
 
-
-run: tria sym
-	./sym
-	./tria
